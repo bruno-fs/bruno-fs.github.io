@@ -144,8 +144,9 @@ This is the output for "simple_dict" tests
 
 ![pytest-v-unittest-simple-dict](../test%20assertion%20styles/5127241a8bd1e1e540f485aa464e5b8313b84a54.png)
 
-style. Both seem useful to me.
-Let's se a more nested dict version now.
+Both seem useful to me in this scenario.
+
+Let's see a test using the nested dict.
 
 ![pytest-v-unittest-nested-dict](../test%20assertion%20styles/e5394d71629bcd30f882f9803b1d5cbabbb38fee.png)
 
@@ -153,8 +154,8 @@ Again, no clear winner, right? Hold on a sec, let's try again with the `-vv` for
 
 ![pytest-v-unittest-nested-dict-vv](../test%20assertion%20styles/7900c985ddcf3950fe926ae31cc26aef83744a99.png)
 
-Look at that! `pytest` style is the clear winner here. It points where
-exactly is the difference with a dict. I should say this only works so well for differences in values. Differences in `keys` won't be so clear, but `pytest` will try to help.
+Whoa! Look at that! `pytest` style is the clear winner here. It points where
+exactly difference is within the dict. I should mention this only works well for differences in `values`. Differences in `keys` won't be so clear, but `pytest` will try to help.
 
 As for `unittest`, setting `maxDiff` don't help too much. It only makes the output more verbose.
 
