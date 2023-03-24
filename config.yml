@@ -1,0 +1,8 @@
+baseURL: http://bruno-fs.github.io/
+languageCode: en-us
+title: Bruno FS Ciconelle
+theme: "PaperMod"
+
+minify:
+  disableXML: true
+  minifyOutput: true
