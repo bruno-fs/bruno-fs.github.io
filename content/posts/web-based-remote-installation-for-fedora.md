@@ -18,7 +18,7 @@ If you've ever needed to install Fedora on a headless server, a Raspberry Pi, or
 
 The Anaconda installer's Web UI first landed in Fedora 42 Workstation and was extended to all Live spins in Fedora 43. It's a full graphical installer built on Cockpit tooling and using PatternFly widgets. The GUI is rendered in a fullscreen browser window - but until now, that browser had to be running on the same machine you're installing onto.
 
-Here's the thing: VNC and RDP remote installation work with the GTK interface, not the Web UI. As the Web UI becomes the primary installer interface across Fedora editions, it needs its own remote access story - and that story is serving the Web UI itself to a remote browser. This is the replacement for VNC/RDP in the Web UI world.
+Here's the thing: VNC and RDP were built around the GTK interface. While RDP could technically work with the Web UI too (it operates at the display level), a remote browser is a much better fit - orders of magnitude less data and much lower UI latency. As the Web UI becomes the primary installer interface across Fedora editions, it needs its own native remote access story.
 
 On top of that, there are two more forces pushing in the same direction.
 
