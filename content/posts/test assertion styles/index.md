@@ -1,5 +1,5 @@
 ---
-date: "2023-03-24T16:38-03:00"
+date: "2023-03-24T16:38:00-03:00"
 tags:
 - pytest
 - unnittest
@@ -133,7 +133,7 @@ class TestDummy(TestCase):
 ## long strings {#long-strings}
 
 This is the output for "long_text" tests
-![pytest-v-unittest-long-text](../test%20assertion%20styles/23842e581975fb53d9286b152250993cf7a18e71.png)
+![pytest-v-unittest-long-text](23842e581975fb53d9286b152250993cf7a18e71.png)
 
 Whoa, look at that beautiful diff on the report for `TestDummy.test_long_text_pytest_style` ! It's pointing exactly where the difference is, ignoring the rest of the file.
 The `unittest` style doesn't help in this aspect. It mentions it can show the whole thing setting `maxDiff` to `None`, but that doesn't help. Just makes it more verbose.
@@ -142,17 +142,17 @@ The `unittest` style doesn't help in this aspect. It mentions it can show the wh
 
 This is the output for "simple_dict" tests
 
-![pytest-v-unittest-simple-dict](../test%20assertion%20styles/5127241a8bd1e1e540f485aa464e5b8313b84a54.png)
+![pytest-v-unittest-simple-dict](5127241a8bd1e1e540f485aa464e5b8313b84a54.png)
 
 Both seem useful to me in this scenario.
 
 Let's see a test using the nested dict.
 
-![pytest-v-unittest-nested-dict](../test%20assertion%20styles/e5394d71629bcd30f882f9803b1d5cbabbb38fee.png)
+![pytest-v-unittest-nested-dict](e5394d71629bcd30f882f9803b1d5cbabbb38fee.png)
 
 Again, no clear winner, right? Hold on a sec, let's try again with the `-vv` for increased verbosity.
 
-![pytest-v-unittest-nested-dict-vv](../test%20assertion%20styles/7900c985ddcf3950fe926ae31cc26aef83744a99.png)
+![pytest-v-unittest-nested-dict-vv](7900c985ddcf3950fe926ae31cc26aef83744a99.png)
 
 Whoa! Look at that! `pytest` style is the clear winner here. It points where
 exactly difference is within the dict. I should mention this only works well for differences in `values`. Differences in `keys` won't be so clear, but `pytest` will try to help.
@@ -163,6 +163,6 @@ As for `unittest`, setting `maxDiff` don't help too much. It only makes the outp
 
 Those are pretty simillar and I've no strong opinions on which one is better. It's a tie IMO.
 
-![pytest-v-unittest-set](../test%20assertion%20styles/5bc98e50dc063e0d6457748d075bc76935279dc6.png)
+![pytest-v-unittest-set](5bc98e50dc063e0d6457748d075bc76935279dc6.png)
 
-![pytest-v-unittest-list](../test%20assertion%20styles/6632d3f97ba613cf02e32118cef9abd9d549ed18.png)
+![pytest-v-unittest-list](6632d3f97ba613cf02e32118cef9abd9d549ed18.png)
